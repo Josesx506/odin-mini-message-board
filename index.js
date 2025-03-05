@@ -1,12 +1,10 @@
 const path = require('node:path');
 const express = require('express');
-const ejs = require('ejs')
-const LRU = require('lru-cache');
+const ejs = require('ejs');
 const miniMsgRouter = require('./routes/miniMessage')
 
 
 const app = express();
-ejs.cache = new LRU(100);
 
 // Static files like css
 const assetsPath = path.join(__dirname, 'public');
