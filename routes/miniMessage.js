@@ -1,5 +1,6 @@
 const express = require('express');
 const data = require('../model/data');
+const { v4: uuidv4 } = require('uuid');
 
 const router = express.Router();
 
@@ -27,7 +28,7 @@ router.post('/new', (req,res) => {
         text: newMsg.message, 
         user: newMsg.author, 
         added: new Date(),
-        id: crypto.randomUUID() });
+        id: uuidv4() });
     res.redirect("/");
 })
 
