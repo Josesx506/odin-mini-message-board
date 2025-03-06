@@ -14,7 +14,7 @@ function postNewMessage(req,res) {
     const newMsg = req.body;
     data.messages.push({ 
         text: newMsg.message, 
-        user: newMsg.author, 
+        username: newMsg.author, 
         added: new Date(),
         id: uuidv4() });
     res.redirect("/");
