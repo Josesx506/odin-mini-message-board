@@ -7,12 +7,12 @@ const DBURI = process.env.DBURI;
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  username VARCHAR ( 255 ),
-  message VARCHAR ( 1024 ),
-  posted TIMESTAMP default CURRENT_TIMESTAMP
+  user VARCHAR ( 255 ),
+  text VARCHAR ( 1024 ),
+  added TIMESTAMP default CURRENT_TIMESTAMP
 );
 
-INSERT INTO messages (username, message) 
+INSERT INTO messages (user, text) 
 VALUES
   ('Amando', 'Hi there! Welcome to the Message Board'),
   ('Charles', 'Hello World! This is the Odin Project'),
