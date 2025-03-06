@@ -15,4 +15,4 @@ This project creates a mini message board where a user can post new messages by 
     2. Assign it the following value: `${{ Postgres.DATABASE_URL }}`
     3. Use the variable in your application code.
 - Created a js script `model/populateDB.js` to create the table and insert dummy values once the server is start.
-- Updated the `package.json` start command to use `"start": "node --omit=dev model/populateDB && node index"`
+- Updated the `package.json` start command to use `"start": "node model/populateDB && node index"`

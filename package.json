@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --omit=dev model/populateDB && node index",
+    "start": "node model/populateDB && node index",
     "dev": "node --env-file=.env model/populateDB && node --watch --env-file=.env index"
   },
   "keywords": [],
