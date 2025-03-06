@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "start": "node model/populateDB && node index",
+    "dev": "node --env-file=.env model/populateDB && node --watch --env-file=.env index"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
+    "pg": "^8.13.3",
     "uuid": "^11.1.0"
   }
 }

@@ -17,9 +17,6 @@
     position: sticky;
     top: 0;
     background-color: white;
-}
-
-.navBar {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
